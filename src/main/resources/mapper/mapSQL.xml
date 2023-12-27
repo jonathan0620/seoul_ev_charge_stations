@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="map">
+	<select id="getAllChargingStations" resultType="mapVO">
+		SELECT c_name, c_lat, c_lon FROM charge_stations
+	</select>
+</mapper>
+
+<!-- <select id="chargeSelect" parameterType="mapVO" resultType="mapVO"> 
+	SELECT * FROM chargestation WHERE (:district = 'all' OR c_location = :district) 
+	AND (:chargeType = 'all' OR c_device_large = :chargeType) AND (:chargeName 
+	= 'all' OR c_name = :chargeName) </select> -->
